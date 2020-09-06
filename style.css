@@ -31,7 +31,22 @@ header {
     display: none;
 }
 
+.mobilenavbar {
+    display: none;
+    position: absolute;
+    width: 300px;
+    background: white;
+    height: 280px;
+    border-radius: 4px;
+    top: 14%;
+    right: 7%;
+}
+
 .sidebars {
+    width: 30px;
+}
+.close {
+    display: none;
     width: 30px;
 }
 
@@ -301,6 +316,17 @@ color: hsl(136, 65%, 51%);
     .container {
         display: none;
     }
+    .nav-links {
+        justify-content: space-evenly;
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-link a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #000;
+    }
     .mobileContainer {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -452,6 +478,3 @@ color: hsl(136, 65%, 51%);
         margin: 12px 0px 9px 10px;
     }
     }
-
-    
-}

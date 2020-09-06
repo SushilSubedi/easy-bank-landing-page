@@ -23,10 +23,13 @@
       <div class="logo-container">
         <img src="./images/logo.svg" alt="logo"/>
       </div>
-        <div class="sidebars">
+        <div class="sidebars" id="sidebars">
           <div class="sidebar"></div>
           <div class="sidebar"></div>
           <div class="sidebar"></div>
+        </div>
+        <div class="close" id="close">
+          <img src="./images/icon-close.svg" alt="close">
         </div>
     </div>
     <div class="container">
@@ -72,6 +75,16 @@
 
     <div class="backgroundDiv">
       <img class="background" src="./images/bg-intro-desktop.svg" alt="background image"/>
+      <div class="mobilenavbar" id="mobilenavbar">
+        <ul class="nav-links">
+          <li class="nav-link"><a href="#f">Home</a></li>
+          <li class="nav-link"><a href="#f">About</a></li>
+          <li class="nav-link"><a href="#f">Contact</a></li>
+          <li class="nav-link"><a href="#f">Blog</a></li>
+          <li class="nav-link"><a href="#f">Careers</a></li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="info">
@@ -252,5 +265,22 @@
         </div>
       </section>
   </footer>
+  <script>
+      const navBar = document.getElementById('sidebars');
+      const nav = document.getElementById("mobilenavbar");
+      const close = document.querySelector('.close');
+
+      
+      navBar.addEventListener('click', () => {
+          nav.style.display = "grid"
+          navBar.style.display = 'none';
+          close.style.display = 'grid';
+      })
+      close.addEventListener('click', () => {
+        navBar.style.display = 'grid';
+          close.style.display = 'none';
+          nav.style.display = 'none'
+      })
+  </script>
 </body>
 </html>

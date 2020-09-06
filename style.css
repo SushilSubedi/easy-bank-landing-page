@@ -27,6 +27,14 @@ header {
     align-items: center;
 }
 
+.mobileContainer {
+    display: none;
+}
+
+.sidebars {
+    width: 30px;
+}
+
 .logo-container,
 .nav-links,
 .buttonDiv {
@@ -287,4 +295,163 @@ color: hsl(136, 65%, 51%);
     margin: 0 0 0 8px;
     width: 4%;
     cursor: pointer;
+}
+
+@media only screen and (max-width:375px) {
+    .container {
+        display: none;
+    }
+    .mobileContainer {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 182px;
+        align-items: center;
+        padding: 0 2%;
+
+    }
+    .logo-container {
+        flex: 1;
+    }
+    .sidebars {
+        flex: 1;
+        margin: 10% 0;
+    }
+    .sidebar {
+        border-bottom: 2px solid rgb(56, 54, 54);
+        margin: inherit;
+    }
+    .logo-container img {
+        width: 110px;
+        height: 24px;
+    }
+    /* article design */
+    .presentation {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        min-height: 80vh;
+        align-items: center;
+    }
+    .cover {
+        grid-column: 1/1;
+        height: 427px;
+        max-width: 680px;
+        top: 1%;
+        right: -2%;
+    }
+    .cover img {
+        height: 90%;
+        filter: drop-shadow(0 5px 3px black);
+    }
+    .background  {
+        position: absolute;
+        top: -25%;
+        right: -66%;
+        z-index: -1;
+        height: 87%;
+    }
+
+    .intro-text h1 {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .intro-text p {
+        color: hsl(195, 2%, 63%);
+        margin-top: 5%;
+        text-align: center;
+        font-size: 14px;
+    }
+    .inviteButton {
+        padding: 40px 0px;
+        text-align: center;
+    }
+    
+    .information h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .information p {
+        color: hsl(195, 2%, 63%);
+        margin-top: 4%;
+        font-size: 14px;
+    }
+    .information {
+        width: 84%;
+        margin: auto;
+        min-height: 20vh;
+        align-items: center;
+        text-align: center;
+        padding: 4%;
+    }
+    .introduction {
+        grid-column: 1/1;
+        grid-row: 2/2;
+        min-height: 20vh;
+        align-items: center;
+    }
+    .cardlist {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 22px;
+        width: 88%;
+        padding: 3% 1% 14% 0%;
+        margin: auto;
+        text-align: center;
+    }
+    .article {
+        text-align: center;
+        padding: 10% 0;
+    }
+    .articleTitle {
+        width: 85%;
+        margin: auto;
+        padding: 5% 2%;
+    }
+    .intro {
+        padding: 7% 9%;
+        text-align: left;
+    }
+    footer {
+        background: hsl(233, 26%, 24%);
+        text-align: center;
+    }
+    .itemList {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .itemList ul {
+        list-style: none;
+        /* margin-top: 5px; */
+    }
+
+    /* footer  */
+    .footerList {
+        margin-right: 8%;
+        padding: 3%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logo2 img {
+        width: 32%;
+        padding-left: 4%;
+        margin: 3% 0;
+    }
+    .footerbutton {
+        align-self: end;
+        justify-self: center;
+        width: 58%;
+        margin: 7%;
+        padding-right: 9%;
+    }
+    .icons img {
+        margin: 0 0 0 8px;
+        width: 5%;
+        cursor: pointer;
+    }
+    .icons {
+        margin: 12px 0px 9px 10px;
+    }
+    }
+
+    
 }
